@@ -1,1 +1,0 @@
-let Component = ({test}) => (<div test={test}/>);
