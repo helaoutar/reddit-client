@@ -38,6 +38,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "firebase": "^4.9.1",
+    "firebaseui": "^2.6.0",
     "lodash": "^4.17.5",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
