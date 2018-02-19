@@ -70,10 +70,5 @@
 "use strict";
 
 
-var Component = function Component(_ref) {
-  var test = _ref.test;
-  return React.createElement("div", { test: test });
-};
-
 /***/ })
 /******/ ]);

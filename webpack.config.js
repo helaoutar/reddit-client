@@ -7,7 +7,7 @@ module.exports = {
     entry: APP_DIR + '/index.jsx',
     output: {
         path: BUILD_DIR,
-        filename: 'build.js',
+        filename: 'dist.js',
     },
     module: {
         rules: [
