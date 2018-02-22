@@ -1,7 +1,10 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-export default Component => props => (
-    <Router>
-        <Route component={() => <Component {...props} />} />
-    </Router>
+const provideRouter = Component => props => (
+    <BrowserRouter>
+        <Component {...props} />
+    </BrowserRouter>
 );
+
+export default provideRouter;
