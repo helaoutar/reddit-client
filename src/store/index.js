@@ -3,12 +3,12 @@ import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import reducers from '../reducers';
 
-let logger = createLogger();
+const logger = createLogger();
 
-export default (state) => (
+export default (initialState = {}) => (
     createStore(
         reducers,
-        state,
+        initialState,
         applyMiddleware(
             thunkMiddleware,
             logger
