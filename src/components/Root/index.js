@@ -1,11 +1,14 @@
 import React from 'react';
 
 import provideStoreAndRouter from '../../hoc/provideStoreAndRouter';
-import store from '../../store';
+import createStore from '../../store';
 import App from '../App';
 
+
+const store = createStore();
+
 const Root = props => {
-    const AppWithStoreAndRouter = provideStoreAndRouter(store())(App);
+    const AppWithStoreAndRouter = provideStoreAndRouter(store)(App);
     return <AppWithStoreAndRouter {...props} />;
 }
 

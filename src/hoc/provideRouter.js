@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 const provideRouter = Component => props => (
     <BrowserRouter>
-        <Component {...props} />
+        <Route component={({location}) => <Component {...props} location={location} /> } />
     </BrowserRouter>
 );
 
