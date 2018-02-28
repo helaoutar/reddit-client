@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Hello = () => (
-    <div>test</div>
+    <div>sign up</div>
 );
 
 export default Hello;

@@ -8,3 +8,9 @@ const provideRouter = Component => props => (
 );
 
 export default provideRouter;
+
+/**
+ * ????
+ * 1) get user data (redux)
+ * 2) redirections based on the user data + location
+ */
