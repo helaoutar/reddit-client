@@ -2,6 +2,7 @@ import React from 'react';
 
 import provideStoreAndRouter from '../../hoc/provideStoreAndRouter';
 import createStore from '../../store';
+import '../../firebase';
 import App from '../App';
 
 

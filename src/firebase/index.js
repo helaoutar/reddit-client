@@ -1,6 +1,6 @@
-import * as firebase from 'firebase';
+import firebase from 'firebase/app';
 
-var config = {
+const config = {
     apiKey: "AIzaSyCVcQPOpE5lA635O5DqsUYQJ99oWp4aOBA",
     authDomain: "pwd-manage.firebaseapp.com",
     databaseURL: "https://pwd-manage.firebaseio.com",
