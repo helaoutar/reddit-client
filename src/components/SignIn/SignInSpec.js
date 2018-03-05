@@ -1,15 +1,6 @@
-import React from 'react';
-
 describe('SignIn', () => {
-    const props = {
-        emailRef: jest.fn(),
-        passwordRef: jest.fn(),
-        submitHandler: jest.fn(),
-        fbAuthHandler: jest.fn(),
-        twAuthHandler: jest.fn()
-    };
-
-    it('', () => {
-
+    it('should test stuff', () => {
+        const ONE = 1;
+        expect(ONE).toBe(ONE);
     });
 });

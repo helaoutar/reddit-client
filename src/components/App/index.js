@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
-import { connect } from 'react-redux';
 import { auth } from 'firebase';
 
 import Home from '../Home';
 import SignIn from '../SignIn';
 import SignUp from '../SignUp';
-import SignOut from '../SignOut';
 
 class App extends Component {
     constructor(props) {
