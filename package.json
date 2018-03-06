@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint:css": "stylelint \"src/**/*.less\"",
     "lint:js": "eslint --ext .js,.jsx src",
     "test": "jest",
+    "prepare-build": "npm-run-all lint:* test",
     "build": "webpack",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -37,6 +39,7 @@
     "jest": "^22.2.1",
     "less": "^2.7.3",
     "less-loader": "^4.0.6",
+    "npm-run-all": "^4.1.2",
     "react-test-renderer": "^16.2.0",
     "sinon": "^4.3.0",
     "sinon-chai": "^2.14.0",
