@@ -7,7 +7,7 @@
     "lint:css": "stylelint \"src/**/*.less\"",
     "lint:js": "eslint --ext .js,.jsx src",
     "test": "jest",
-    "prepare-build": "npm-run-all lint:* test",
+    "prepare-build": "npm-run-all lint:* test:coverage",
     "build": "webpack",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
