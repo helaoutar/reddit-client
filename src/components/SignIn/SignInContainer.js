@@ -1,10 +1,38 @@
 import React from 'react';
 import SignIn from './SignIn';
+import { connect } from 'react-redux';
+
+import { signIn } from '../../actions';
 
 class SignInContainer extends React.Component {
+    constructor(props) {
+        super(props);
+        this.submitHandler = this.submitHandler.bind(this);
+        this.emailRef = this.emailRef.bind(this);
+        this.passwordRef = this.passwordRef.bind(this);
+    }
+
+    submitHandler() {
+        this.props.signIn(this.email.value, this.password.value);
+    }
+
+    emailRef(ref) {
+        this.email = ref;
+    }
+
+    passwordRef(ref) {
+        this.password = ref;
+    }
+
     render() {
-        return <SignIn submitHandler={() => true}/>;
+        return <SignIn
+            submitHandler={this.submitHandler}
+            emailRef={this.emailRef}
+            passwordRef={this.passwordRef}
+        />;
     }
 }
 
-export default SignInContainer;
+const mapDispatchToProps = dispatch => ({ signIn: (email, password) => dispatch(signIn(email, password)) });
+
+export default connect(null, mapDispatchToProps)(SignInContainer);

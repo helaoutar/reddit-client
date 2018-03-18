@@ -16,4 +16,15 @@ describe('actions', () => {
             });
         });
     });
+
+    
+    describe('failedSignIn', () => {
+        it('should return an action with type FAILED_SIGN_IN', () => {
+            const errors = [{ 'email': 'wrong email' }];
+            expect(actions.failedSignIn(errors)).toEqual({
+                type: actions.FAILED_SIGN_IN,
+                errors
+            });
+        });
+    });
 });
