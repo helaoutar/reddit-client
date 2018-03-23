@@ -1,8 +1,18 @@
 import React from 'react';
+
+import Loader from '../Loader';
+
 import './SignIn.less';
 
-const SignIn = ({ emailRef, passwordRef, submitHandler, fbAuthHandler, twAuthHandler }) => (
-    <div className="main">
+const SignIn = ({
+        emailRef,
+        passwordRef,
+        submitHandler,
+        fbAuthHandler,
+        twAuthHandler,
+        isLoading
+    }) => (
+    <div className="SignIn">
         <div className="social-icons">
             <div className="col_1_of_f span_1_of_f">
                 <a onClick={fbAuthHandler} href="#">
@@ -25,6 +35,7 @@ const SignIn = ({ emailRef, passwordRef, submitHandler, fbAuthHandler, twAuthHan
             <div className="clear"> </div>
         </div>
         <h2>Or SignIn with your email/password</h2>
+        { isLoading ? <div> <Loader /> </div> : null }
         <div>
             <div className="lable-2">
                 <input type="text" className="text" ref={emailRef} />

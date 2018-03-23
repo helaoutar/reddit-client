@@ -29,10 +29,13 @@ class SignInContainer extends React.Component {
             submitHandler={this.submitHandler}
             emailRef={this.emailRef}
             passwordRef={this.passwordRef}
+            isLoading={this.props.isLoading}
         />;
     }
 }
 
-const mapDispatchToProps = dispatch => ({ signIn: (email, password) => dispatch(signIn(email, password)) });
+const mapStateToProps = ({appState}) => ({ isLoading: !!appState });
 
-export default connect(null, mapDispatchToProps)(SignInContainer);
+const mapDispatchToProps = { signIn };
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignInContainer);
