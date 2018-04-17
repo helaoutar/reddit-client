@@ -66,6 +66,10 @@
     "redux-thunk": "^2.2.0"
   },
   "jest": {
+    "moduleNameMapper": {
+        ".*less$": "<rootDir>/src/less/stub.css",
+        ".*png": "<rootDir>/src/less/stub.css"
+    },
     "setupTestFrameworkScriptFile": "<rootDir>src/setupTests.js"
   }
 }
