@@ -1,68 +1,87 @@
 @import "../../less/style";
 
 .SignIn {
-    height: 100%;
-    background-color: #3C4C55;
+  height: 100%;
+  background-color: #3C4C55;
 }
 
 .SignIn__form {
-    width: 30%;
-    margin: 0 auto;
+  width: 30%;
+  margin: 40px auto;
 
-    .on-narrow-and-medium({
-        width: 90%;
-    });
+  .on-narrow-and-medium({
+    width: 90%;
+  });
 }
 
 .SignIn__email, .SignIn__password {
-    display: block;
-    outline: none;
-    transition: all 0.3s ease-out;
-    width: 100%;
-    padding: 10px 3px;
-    margin: 17px 0;
-    transition: all 0.3s ease-out;
-    box-sizing: border-box;
-    border-left: solid white 5px;
-    font-weight: 700;
-    font-family: 'Oxygen', sans-serif;
-    cursor: pointer;
+  display: block;
+  outline: none;
+  transition: all 0.3s ease-out;
+  width: 100%;
+  padding: 10px 3px;
+  margin: 17px 0;
+  transition: all 0.3s ease-out;
+  box-sizing: border-box;
+  border-left: solid white 5px;
+  font-weight: 700;
+  font-family: 'Oxygen', sans-serif;
+  cursor: pointer;
 
-    &:focus {
-        border-left: solid #55ACEE 5px;
-        color: rgb(78, 78, 78);
-    }
-    &::placeholder {
-        color: #DCDCDC;;
-    }
+  &:focus {
+    border-left: solid #55ACEE 5px;
+    color: rgb(78, 78, 78);
+  }
+  &::placeholder {
+    color: #DCDCDC;;
+  }
 }
 
 .SignIn__submit-button {
-    width: 100%;
-    background-color: #55ACEE;
-    color: white;
-    padding: 10px 0px;
-    transition: all 0.1s ease-out;
-    cursor: pointer;
+  width: 100%;
+  background-color: #55ACEE;
+  color: white;
+  padding: 10px 0px;
+  transition: all 0.1s ease-out;
+  cursor: pointer;
 
-    &:hover {
-        background-color: rgb(40, 152, 238);
-    }
+  &:hover {
+    background-color: rgb(40, 152, 238);
+  }
 }
 
 .SignIn__logo-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .SignIn__logo {
-    height: 135px;
+  height: 135px;
 
-    .on-narrow-and-medium({
-        height: 115px;
-    });
+  .on-narrow-and-medium({
+    height: 115px;
+  });
 
-    .on-narrow({
-        height: 115px;
-    });
+  .on-narrow({
+    height: 115px;
+  });
+}
+
+.SignIn__submit-button-error-message,
+.SignIn__email-error-message {
+  font-weight: bold;
+  font-family: 'Oxygen', sans-serif;
+  color: #dd3232;
+  font-size: 14px;
+  padding-left: 2px;
+}
+
+.SignIn__email--error,
+.SignIn__password--error {
+  border: #dd3232 solid 1px;
+  margin-top: 7px;
+
+  &::placeholder {
+    color: #dd3232;
+  }
 }

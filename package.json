@@ -38,10 +38,13 @@
     "file-loader": "^1.1.11",
     "image-webpack-loader": "^4.1.0",
     "jest": "^22.2.1",
+    "json-loader": "^0.5.7",
     "less": "^2.7.3",
     "less-loader": "^4.0.6",
     "npm-run-all": "^4.1.2",
+    "prettier": "^1.12.1",
     "react-test-renderer": "^16.2.0",
+    "redux-actions": "^2.3.0",
     "sinon": "^4.3.0",
     "sinon-chai": "^2.14.0",
     "style-loader": "^0.20.2",
@@ -67,8 +70,8 @@
   },
   "jest": {
     "moduleNameMapper": {
-        ".*less$": "<rootDir>/src/less/stub.css",
-        ".*png": "<rootDir>/src/less/stub.css"
+      ".*less$": "<rootDir>/src/less/stub.css",
+      ".*png": "<rootDir>/src/less/stub.css"
     },
     "setupTestFrameworkScriptFile": "<rootDir>src/setupTests.js"
   }

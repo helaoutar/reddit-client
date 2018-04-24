@@ -7,22 +7,22 @@ import SignIn from '../SignIn';
 import SignUp from '../SignUp';
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.user = auth().currentUser;
-        this.isLoggedIn = !!this.user;
-    }
+  constructor(props) {
+    super(props);
+    this.user = auth().currentUser;
+    this.isLoggedIn = !!this.user;
+  }
 
-    render() {
-        return (
-            <Switch>
-                <Route path="/signIn" render={() => this.isLoggedIn ? <Redirect to="/" /> : <SignIn /> } />
-                <Route path="/signUp" render={() => this.isLoggedIn ? <Redirect to="/" /> : <SignUp /> } />
-                <Route path="/logout" render={() => <Redirect to="/signIn" /> } />
-                <Route path="/" render={() => this.isLoggedIn ? <Home /> : <Redirect to="/signIn" /> } />
-            </Switch>
-        );
-    }
+  render() {
+    return (
+      <Switch>
+        <Route path="/signIn" render={() => this.isLoggedIn ? <Redirect to="/" /> : <SignIn /> } />
+        <Route path="/signUp" render={() => this.isLoggedIn ? <Redirect to="/" /> : <SignUp /> } />
+        <Route path="/logout" render={() => <Redirect to="/signIn" /> } />
+        <Route path="/" render={() => this.isLoggedIn ? <Home /> : <Redirect to="/signIn" /> } />
+      </Switch>
+    );
+  }
 }
 
 export default App;

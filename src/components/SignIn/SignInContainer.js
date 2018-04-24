@@ -5,36 +5,51 @@ import { connect } from 'react-redux';
 import { signIn } from '../../actions';
 
 class SignInContainer extends React.Component {
-    constructor(props) {
-        super(props);
-        this.submitHandler = this.submitHandler.bind(this);
-        this.emailRef = this.emailRef.bind(this);
-        this.passwordRef = this.passwordRef.bind(this);
-    }
+  constructor(props) {
+    super(props);
+    this.submitHandler = this.submitHandler.bind(this);
+    this.emailRef = this.emailRef.bind(this);
+    this.passwordRef = this.passwordRef.bind(this);
+  }
 
-    submitHandler() {
-        this.props.signIn(this.email.value, this.password.value);
-    }
+  submitHandler() {
+    this.props.signIn(this.email.value, this.password.value);
+  }
 
-    emailRef(ref) {
-        this.email = ref;
-    }
+  emailRef(ref) {
+    this.email = ref;
+  }
 
-    passwordRef(ref) {
-        this.password = ref;
-    }
+  passwordRef(ref) {
+    this.password = ref;
+  }
 
-    render() {
-        return <SignIn
-            submitHandler={this.submitHandler}
-            emailRef={this.emailRef}
-            passwordRef={this.passwordRef}
-            isLoading={this.props.isLoading}
-        />;
-    }
+  render() {
+    return (
+      <SignIn
+        submitHandler={this.submitHandler}
+        emailRef={this.emailRef}
+        passwordRef={this.passwordRef}
+        isLoading={this.props.isLoading}
+        {...this.props}
+      />
+    );
+  }
 }
 
-const mapStateToProps = ({appState}) => ({ isLoading: !!appState });
+const mapStateToProps = ({ 
+  appState, 
+  signInErrors: {
+    emailErrorMessage,
+    passwordErrorMessage,
+    genericMessage,
+  },
+}) => ({
+  isLoading: !!appState,
+  emailErrorMessage,
+  passwordErrorMessage,
+  genericMessage,
+});
 
 const mapDispatchToProps = { signIn };
 

@@ -9,8 +9,8 @@ import App from '../App';
 const store = createStore();
 
 const Root = props => {
-    const AppWithStoreAndRouter = provideStoreAndRouter(store)(App);
-    return <AppWithStoreAndRouter {...props} />;
+  const AppWithStoreAndRouter = provideStoreAndRouter(store)(App);
+  return <AppWithStoreAndRouter {...props} />;
 }
 
 export default Root;

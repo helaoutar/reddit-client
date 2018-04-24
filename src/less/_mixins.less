@@ -1,29 +1,29 @@
 .on-narrow(@rules) {
-    @media screen and (max-width: @breakpoint_narrow) {
-        @rules();
-    }
+  @media screen and (max-width: @breakpoint_narrow) {
+    @rules();
+  }
 }
 
 .on-medium(@rules) {
-    @media screen and (min-width: @breakpoint_narrow-medium) and (max-width: @breakpoint_wide) {
-        @rules();
-    }
+  @media screen and (min-width: @breakpoint_narrow-medium) and (max-width: @breakpoint_wide) {
+    @rules();
+  }
 }
 
 .on-wide(@rules) {
-    @media screen and (min-width: @breakpoint_medium-wide) {
-        @rules();
-    }
+  @media screen and (min-width: @breakpoint_medium-wide) {
+    @rules();
+  }
 }
 
 .on-narrow-and-medium(@rules) {
-    @media screen and (max-width: @breakpoint_wide) {
-        @rules();
-    }
+  @media screen and (max-width: @breakpoint_wide) {
+    @rules();
+  }
 }
 
 .on-medium-and-wide(@rules) {
-    @media screen and (min-width: @breakpoint_narrow-medium) {
-        @rules();
-    }
+  @media screen and (min-width: @breakpoint_narrow-medium) {
+    @rules();
+  }
 }
