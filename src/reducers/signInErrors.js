@@ -7,25 +7,22 @@ const formatErrors = errors => {
 
   switch (errors.code) {
     case INVALID_EMAIL:
-      Object.assign(errorMessages, {
+      return Object.assign(errorMessages, {
         emailErrorMessage: 'Please check your email.',
       });
-      break;
 
     case USER_NOT_FOUND:
-      Object.assign(errorMessages, {
+      return Object.assign(errorMessages, {
         emailErrorMessage: 'Email not found.',
       });
-      break;
 
     case WRONG_PASSWORD:
-      Object.assign(errorMessages, {
+      return Object.assign(errorMessages, {
         passwordErrorMessage: 'Wrong Password.',
       });
-      break;
 
     default:
-      Object.assign(errorMessages, {
+      return Object.assign(errorMessages, {
         genericMessage: 'Something wrong, please try again.',
       });
   }
